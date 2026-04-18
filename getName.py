@@ -8,4 +8,4 @@ def get_age(age):
 
 
 print(get_full_name("john", "doe"))
-print(get_age("22"))
+print(get_age("24"))
