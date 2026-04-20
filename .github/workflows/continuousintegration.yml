@@ -2,11 +2,7 @@ name: Python CI
 
 on:
   push:
-    branches: [ main ]
-
-permissions:
-  contents: read
-  security-events: write
+    branches: [main]
 
 jobs:
   scan:
@@ -15,8 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Python Lint Code Scanning Action
-        uses: advanced-security/python-lint-code-scanning-action@v1
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          linter: pylint
+          python-version: '3.12'
 
+      - name: Install pylint
+        run: pip install pylint
+
+      - name: Run pylint
+        run: pylint *.py
