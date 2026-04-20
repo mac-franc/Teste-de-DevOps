@@ -1,0 +1,26 @@
+name: Python CD
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  deliver:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+
+      - name: Simulando Continuos Delivery
+        uses: actions/upload-artifact@v7
+        with:
+          name: projeto zipado.zip
+          path: |
+            '**.py'
+            README.md
