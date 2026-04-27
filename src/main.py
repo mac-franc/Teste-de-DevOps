@@ -9,3 +9,4 @@ def get_full_name(first_name, last_name):
 def get_age(age):
     """Retorna idade em texto."""
     return str(age)
+
