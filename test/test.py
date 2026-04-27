@@ -11,5 +11,3 @@ def test_get_full_name():
 def test_get_age():
     """Testa idade."""
     assert get_age(24) == "24"
-
-    
