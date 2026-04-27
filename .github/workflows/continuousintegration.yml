@@ -20,7 +20,7 @@ jobs:
         run: pip install pylint
 
       - name: Run pylint
-        run: pylint *.py
+        run: pylint **/*.py
 
   discord:
     runs-on: ubuntu-latest
