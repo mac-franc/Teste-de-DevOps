@@ -1,12 +1,13 @@
-from src.main import *
-from unittest.mock import patch
+"""Arquivo de testes."""
+
+from src.main import get_full_name, get_age
 
 
 def test_get_full_name():
-    result = get_full_name("Fulano", "da Silva")
-    assert result == "Fulano Da Silva"
+    """Testa nome completo."""
+    assert get_full_name("fulano", "silva") == "Fulano Silva"
 
 
 def test_get_age():
-    result = get_age(24)
-    assert result == "24"
+    """Testa idade."""
+    assert get_age(24) == "24"
